@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hinnasto — Kymenlaakson Taksi</title>
+<meta name="description" content="Kymenlaakson Taksin hinnasto: lähtömaksut, kilometrimaksut, odotusmaksu ja lisät.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/images/favicon-32.png" sizes="32x32">
+<link rel="icon" href="assets/images/favicon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+</head>
+<body>
+<a class="skip-link" href="#sisalto">Siirry sisältöön</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <img src="assets/images/logo-keltainen.png" alt="Kymenlaakson Taksi" width="64" height="40">
+    </a>
+    <nav class="main-nav" aria-label="Päävalikko">
+      <a href="index.html">Etusivu</a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="palvelut-menu">
+          Palvelut <span class="caret" aria-hidden="true">&#9662;</span>
+        </button>
+        <ul class="nav-dropdown-menu" id="palvelut-menu">
+          <li><a href="palvelut.html">Kaikki palvelut</a></li>
+          <li><a href="kela-taksi.html">Kela-taksi</a></li>
+          <li><a href="sote-taksi.html">Sote-taksi</a></li>
+        </ul>
+      </div>
+      <a href="hinnasto.html" class="active" aria-current="page">Hinnasto</a>
+      <a href="yrityksille.html">Yrityksille</a>
+      <a href="rekry.html">Rekry</a>
+      <a href="ota-yhteytta.html">Ota yhteyttä</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+35810087227" class="call-chip">&#128222; <span class="chip-sub">0100 87227</span></a>
+      <button class="menu-toggle" aria-label="Avaa valikko" aria-expanded="false" aria-controls="mobile-nav">&#9776;</button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Etusivu</a>
+    <a href="palvelut.html">Palvelut</a>
+    <div class="sub-links">
+      <a href="kela-taksi.html">Kela-taksi</a>
+      <a href="sote-taksi.html">Sote-taksi</a>
+    </div>
+    <a href="hinnasto.html" class="active" aria-current="page">Hinnasto</a>
+    <a href="yrityksille.html">Yrityksille</a>
+    <a href="rekry.html">Rekry</a>
+    <a href="ota-yhteytta.html">Ota yhteyttä</a>
+  </div>
+</header>
+
+<main id="sisalto">
+
+  <section class="hero hero-page">
+    <div class="wrap">
+      <span class="eyebrow">Hinnasto</span>
+      <h1>Selkeä hinnoittelu, ei yllätyksiä</h1>
+      <p class="lead">Hinnat sisältävät alv 13,5 %.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+
+      <div class="stat-grid" style="margin-bottom:48px;">
+        <div class="stat-cell">
+          <div class="stat-icon">🧍</div>
+          <div class="stat-label">1–4 henkilöä</div>
+          <div class="stat-value">1,66<span class="stat-unit">€/km</span></div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-icon">👨‍👩‍👧‍👦</div>
+          <div class="stat-label">5–8 henkilöä</div>
+          <div class="stat-value">2,55<span class="stat-unit">€/km</span></div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-icon">⏱️</div>
+          <div class="stat-label">Aikaveloitus</div>
+          <div class="stat-value">0,65<span class="stat-unit">€/min</span></div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-icon">🐷</div>
+          <div class="stat-label">Perusmaksu ma–la klo 6–18</div>
+          <div class="stat-value">5,60<span class="stat-unit">€/kerta</span></div>
+        </div>
+      </div>
+
+      <table class="price-table">
+        <thead>
+          <tr><th>Maksu</th><th style="text-align:right;">Hinta</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lähtömaksu ma–la klo 6–18</td>
+            <td class="amount">5,60 € / kerta</td>
+          </tr>
+          <tr>
+            <td>Lähtömaksu muina aikoina ja pyhäpäivinä</td>
+            <td class="amount">8,60 € / kerta</td>
+          </tr>
+          <tr>
+            <td>Kilometrimaksu, 1–4 henkilöä</td>
+            <td class="amount">1,66 € / km + 0,65 € / min</td>
+          </tr>
+          <tr>
+            <td>Kilometrimaksu, 5–8 henkilöä</td>
+            <td class="amount">2,55 € / km + 0,65 € / min</td>
+          </tr>
+          <tr>
+            <td>Minimihinta</td>
+            <td class="amount">10 €</td>
+          </tr>
+          <tr>
+            <td>Odotusmaksu</td>
+            <td class="amount">65 € / h</td>
+          </tr>
+          <tr>
+            <td>Avustuslisä</td>
+            <td class="amount">21 €</td>
+          </tr>
+          <tr>
+            <td>Porrasveto</td>
+            <td class="amount">42 €</td>
+          </tr>
+          <tr>
+            <td>Paariasennus</td>
+            <td class="amount">42 €</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="price-note">Hinnat sisältävät alv 13,5 %. Tarkemman hinnaston saat toimistoltamme, <a href="ota-yhteytta.html">ota yhteyttä</a>.</p>
+    </div>
+  </section>
+
+  <section class="section-alt" id="hintalaskuri">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Hintalaskuri</span>
+        <h2>Arvioi taksikyytisi hinta</h2>
+      </div>
+
+      <div class="calc-card">
+        <p class="calc-note">Laskuri käyttää yllä olevan hinnaston hintoja. Hinta on arvio — lopullinen hinta määräytyy aina taksimittarin mukaan.</p>
+
+        <fieldset class="calc-fieldset">
+          <legend>Milloin matkustat?</legend>
+          <div class="calc-radio-row">
+            <label class="calc-radio"><input type="radio" name="calc-time" value="day" checked> Ma–la klo 6–18 (5,60 €)</label>
+            <label class="calc-radio"><input type="radio" name="calc-time" value="night"> Muina aikoina ja pyhäpäivinä (8,60 €)</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="calc-fieldset">
+          <legend>Kuinka monta matkustajaa?</legend>
+          <div class="calc-radio-row">
+            <label class="calc-radio"><input type="radio" name="calc-pax" value="1-4" checked> 1–4 henkilöä (1,66 €/km)</label>
+            <label class="calc-radio"><input type="radio" name="calc-pax" value="5-8"> 5–8 henkilöä (2,55 €/km)</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="calc-fieldset">
+          <legend>Miten lasketaan?</legend>
+          <div class="calc-method-row">
+            <label class="calc-radio"><input type="radio" name="calc-method" value="manual" checked> Syötän matkan pituuden ja ajan itse</label>
+            <label class="calc-radio"><input type="radio" name="calc-method" value="address"> Haen reitin osoitteilla</label>
+          </div>
+        </fieldset>
+
+        <div class="calc-panel active" data-panel="manual">
+          <div class="calc-grid-2">
+            <div class="calc-field">
+              <label for="calc-km">Matkan pituus (km)</label>
+              <input class="calc-input" type="number" min="0" step="0.1" id="calc-km" value="0">
+            </div>
+            <div class="calc-field">
+              <label for="calc-min">Matka-aika (min)</label>
+              <input class="calc-input" type="number" min="0" step="1" id="calc-min" value="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-panel" data-panel="address">
+          <div class="calc-field ac-wrap">
+            <label for="calc-from">Lähtöpaikka</label>
+            <input class="calc-input" type="text" id="calc-from" autocomplete="off" placeholder="esim. Ruuvikatu 12, Kotka">
+            <div class="ac-list" id="calc-from-list" hidden></div>
+            <span class="visually-hidden" id="calc-from-live" aria-live="polite"></span>
+          </div>
+          <div class="calc-field ac-wrap">
+            <label for="calc-to">Määränpää</label>
+            <input class="calc-input" type="text" id="calc-to" autocomplete="off" placeholder="esim. Kymenlaakson keskussairaala">
+            <div class="ac-list" id="calc-to-list" hidden></div>
+            <span class="visually-hidden" id="calc-to-live" aria-live="polite"></span>
+          </div>
+          <p class="ac-status" id="calc-route-status" aria-live="polite"></p>
+          <button type="button" class="btn btn-outline" id="calc-route-btn">Hae reitti</button>
+        </div>
+
+        <div class="calc-field" style="max-width:220px;margin-top:22px;">
+          <label for="calc-wait">Odotusaika (valinnainen, min)</label>
+          <input class="calc-input" type="number" min="0" step="1" id="calc-wait" value="0">
+        </div>
+
+        <button type="button" class="btn btn-primary btn-lg" id="calc-submit">Laske hinta</button>
+
+        <div class="calc-result" id="calc-result" aria-live="polite">
+          <div class="amount" id="calc-amount">0 €</div>
+          <div class="breakdown" id="calc-breakdown"></div>
+        </div>
+
+        <p class="calc-source">Osoitehaku: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-tekijät</a> (Nominatim), rajattu Kymenlaakson alueelle paikannimien parempaa tunnistusta varten. Reititys: <a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="app-band">
+        <div>
+          <span class="eyebrow">Taksi Kymenlaakso -appi</span>
+          <h3>Tilaa taksi apilla ilmaiseksi</h3>
+          <p>Lataa ilmainen Taksi Kymenlaakso -mobiiliappi Apple App Storesta tai Google Play -kaupasta!</p>
+        </div>
+        <div class="store-badges">
+          <span class="store-badge">🍎 App Store</span>
+          <span class="store-badge">▶ Google Play</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Tilaa taksi apilla ilmaiseksi</h2>
+        <p style="color:rgba(255,255,255,.7);">tai soittamalla 0100 87227 (1,54 € puhelu + 0,81 € / min + pvm)</p>
+        <div class="btn-row">
+          <a href="tel:+35810087227" class="btn btn-primary btn-lg">Soita 0100 87227</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Kymenlaakson Taksi</h4>
+        <p style="color:rgba(255,255,255,.5);max-width:320px;">Arjen ahkera apuri — parasta taksipalvelua Kymenlaaksossa, arkeen ja juhlaan.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/kymenlaaksontaksi/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/KymenlaaksonTaksi/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="https://www.youtube.com/channel/UCaCXejosqD8oTyrLFrv1FBg" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Sivukartta</h4>
+        <a href="palvelut.html">Palvelut</a>
+        <a href="hinnasto.html">Hinnasto</a>
+        <a href="yrityksille.html">Yrityksille</a>
+        <a href="rekry.html">Rekry</a>
+        <a href="ota-yhteytta.html">Ota yhteyttä</a>
+      </div>
+      <div>
+        <h4>Tilaukset</h4>
+        <a href="tel:+35810087227">Taksitilaukset 0100 87227</a>
+        <a href="tel:+35880005163">Kela-taksi 0800 05163</a>
+        <a href="tel:+358800302323">Sote-taksi 0800 302323</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Kymenlaakson Taksi Oy</span>
+      <div>
+        <a href="https://www.kymenlaaksontaksi.fi/tietosuojaseloste" target="_blank" rel="noopener">Tietosuojaseloste ›</a> &nbsp; <a href="https://www.kymenlaaksontaksi.fi/tietoa-evasteista/" target="_blank" rel="noopener">Tietoa evästeistä ›</a> &nbsp; <a href="https://www.kymenlaaksontaksi.fi/extranet/" target="_blank" rel="noopener">Extranet henkilökunnalle</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Takaisin sivun alkuun">&#8593;</button>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
