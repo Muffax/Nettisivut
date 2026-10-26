@@ -1032,3 +1032,50 @@ section { padding: 72px 0; }
  .premium-mobile-callbar span { font-size: .72rem; line-height: 1.4; font-weight: 600; }
  .premium-home .back-to-top { bottom: calc(100px + env(safe-area-inset-bottom)); }
 }
+
+/* Premium 2026: shared visual language across inner pages.
+   Existing imagery, text, prices and interactive elements remain intact. */
+.premium-site { font-family: Helvetica, Arial, sans-serif; background: #f7f7f7; }
+.premium-site .site-header { background: #000; border-bottom: 1px solid rgba(255,255,255,.16); }
+.premium-site .site-header .wrap { min-height: 82px; }
+.premium-site .main-nav > a, .premium-site .nav-dropdown-toggle { color: #fff; }
+.premium-site .main-nav > a:hover, .premium-site .nav-dropdown-toggle:hover { color: #ffed00; }
+.premium-site .main-nav > a.active, .premium-site .main-nav > a.active:hover,
+.premium-site .nav-dropdown-toggle.active, .premium-site .nav-dropdown-toggle.active:hover,
+.premium-site .nav-dropdown-toggle[aria-expanded="true"] { background: #ffed00; color: #000; }
+.premium-site .nav-dropdown-menu { background: #111; border: 1px solid #333; box-shadow: 0 24px 48px rgba(0,0,0,.3); }
+.premium-site .nav-dropdown-menu a { color: #fff; }
+.premium-site .nav-dropdown-menu a:hover, .premium-site .nav-dropdown-menu a:focus-visible { background: #ffed00; color: #000; }
+.premium-site .hero { background: #000; color: #fff; }
+.premium-site .hero .wrap { padding-top: clamp(76px,8vw,124px); padding-bottom: clamp(76px,8vw,124px); }
+.premium-site .hero h1 { color: #fff; max-width: 950px; font-size: clamp(2.9rem,6vw,5.8rem); font-weight: 800; letter-spacing: -.055em; line-height: 1.02; }
+.premium-site .hero p, .premium-site .hero .lead { color: rgba(255,255,255,.9); font-size: clamp(1.05rem,1.7vw,1.25rem); max-width: 750px; }
+.premium-site .hero .eyebrow { background: #ffed00; color: #000; }
+.premium-site .hero-photo-page { min-height: 510px; }
+.premium-site .hero-photo-page::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.87),rgba(0,0,0,.3)); z-index:1; pointer-events:none; }
+.premium-site .hero-photo-page::after { background:linear-gradient(0deg,rgba(0,0,0,.55),transparent); }
+.premium-site .hero-photo-page .wrap { z-index:2; }
+.premium-site section:not(.hero) { padding-top: clamp(70px,8vw,110px); padding-bottom: clamp(70px,8vw,110px); }
+.premium-site h2 { font-size: clamp(2rem,4vw,3.8rem); line-height:1.08; letter-spacing:-.048em; }
+.premium-site h3 { letter-spacing:-.025em; }
+.premium-site .section-head { max-width:800px; }
+.premium-site .section-dark { background:#101010; }
+.premium-site .section-yellow { background:#ffed00; }
+.premium-site .section-alt { background:#eee; }
+.premium-site .card, .premium-site .job-card { box-shadow:none; border:1px solid rgba(0,0,0,.11); border-radius:7px; }
+.premium-site .cta-band { border-radius:8px; background:#0a0a0a; }
+.premium-site .site-footer { background:#000; }
+.premium-site .eyebrow { letter-spacing:.075em; }
+.premium-site .btn { border-radius:999px; }
+.premium-site :focus-visible { outline:3px solid #ffed00; outline-offset:4px; }
+@media(max-width:760px) {
+ .premium-site { padding-bottom:calc(100px + env(safe-area-inset-bottom)); }
+ .premium-site .hero h1 { font-size:clamp(2.65rem,10vw,4.15rem); }
+ .premium-site .hero .wrap { padding-top:64px; padding-bottom:76px; }
+ .premium-site .hero-photo-page { min-height:470px; }
+ .premium-site .hero-photo-page::before { background:linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.38)); }
+ .premium-site .mobile-nav { background:#0d0d0d; }
+ .premium-site .mobile-nav a { color:#fff; }
+ .premium-site .mobile-nav a.active, .premium-site .mobile-nav a:hover { color:#ffed00; }
+ .premium-site .back-to-top { bottom:calc(100px + env(safe-area-inset-bottom)); }
+}
