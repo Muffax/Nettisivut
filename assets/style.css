@@ -990,3 +990,18 @@ section { padding: 72px 0; }
  .premium-home .mobile-nav a:hover, .premium-home .mobile-nav a.active { color: #ffed00; }
 }
 @media(prefers-reduced-motion: reduce) { .premium-home *, .premium-home *::before, .premium-home *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+
+/* Premium review fixes: visible navigation state and clean hero boundary. */
+.premium-home .main-nav > a.active,
+.premium-home .main-nav > a.active:hover,
+.premium-home .main-nav > a.active:focus-visible,
+.premium-home .nav-dropdown-toggle.active,
+.premium-home .nav-dropdown-toggle.active:hover,
+.premium-home .nav-dropdown-toggle[aria-expanded="true"] { color: #000; background: #ffed00; }
+.premium-home .hero-photo-page .eyebrow { color: #000; background: #ffed00; }
+.premium-home .hero-photo-page { min-height: max(710px, calc(100svh - 82px)); align-items: center; }
+.premium-home .hero-photo-page .wrap { padding-top: clamp(80px,9vw,135px); padding-bottom: clamp(80px,9vw,135px); }
+@media (max-width: 760px) {
+ .premium-home .hero-photo-page { min-height: max(650px, calc(100svh - 84px)); }
+ .premium-home .hero-photo-page .wrap { padding-top: 72px; padding-bottom: 72px; }
+}
