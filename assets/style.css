@@ -384,6 +384,13 @@ section { padding: 72px 0; }
   .stat-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Kolmen faktan rivi (esim. Kela-taksin klo 14 / 25 € / 24-7) */
+.fact-grid { grid-template-columns: repeat(3, 1fr); margin: 20px 0; }
+.fact-grid .stat-value { font-size: 1.7rem; }
+@media (max-width: 560px) {
+  .fact-grid { grid-template-columns: 1fr 1fr; }
+}
+
 /* ---------- Cards ---------- */
 .card-grid {
   display: grid;
@@ -407,6 +414,21 @@ section { padding: 72px 0; }
   background: var(--yellow); color: var(--ink);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 18px;
+}
+.card-yellow { background: var(--yellow); border-color: transparent; }
+.card-yellow h3 { color: var(--ink); }
+.card-yellow p { color: rgba(0,0,0,.82); }
+
+/* Ison tilausnumeron linkki yleiskäyttöön (ei vain .contact-card-sisällä) */
+.kela-big-num {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--ink);
+  margin: 10px 0;
+}
+@media (max-width: 480px) {
+  .kela-big-num { font-size: 1.9rem; }
 }
 .card .card-icon .num-badge { font-size: 1.3rem; font-weight: 900; }
 .card h3 { margin-bottom: 10px; }
@@ -895,3 +917,9 @@ section { padding: 72px 0; }
   box-shadow: var(--shadow);
 }
 .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- Kela-taksi: WCAG-vaatimus vähintään 18 px leipäteksti
+   (paljon ikääntyneitä, näkövammaisia ja liikuntarajoitteisia asiakkaita) ---------- */
+.kela-page p,
+.kela-page li,
+.kela-page .fine { font-size: 1.125rem; }

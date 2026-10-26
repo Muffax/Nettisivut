@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kela-taksi — Kymenlaakson Taksi</title>
-<meta name="description" content="Kela-taksin tilaaminen Kymenlaaksossa: numero, ohjeet ja korvausehdot.">
-<link rel="stylesheet" href="assets/style.css?v=5">
+<meta name="description" content="Kela-taksi Kymenlaaksossa: tilaa numerosta 0800 411254, tilauspuhelu on maksuton. Kymenlaakson Taksi Oy on Kelan sopimuskumppani Haminassa, Kotkassa, Kouvolassa, Miehikkälässä, Pyhtäällä ja Virolahdella.">
+<link rel="stylesheet" href="assets/style.css?v=6">
 <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32">
 <link rel="icon" href="assets/images/favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
@@ -54,14 +54,14 @@
   </div>
 </header>
 
-<main id="sisalto">
+<main id="sisalto" class="kela-page">
 
   <section class="hero hero-photo-page">
     <img class="hero-bg-img" src="assets/images/taksi-yleiskuva.jpg" alt="Kymenlaakson Taksin auto tienvarressa">
     <div class="wrap">
-      <span class="eyebrow">Kela-korvattavat matkat</span>
+      <span class="eyebrow">Kela-korvattavat taksimatkat</span>
       <h1>Kela-taksi</h1>
-      <p class="lead">Kymenlaakson Taksi Oy hoitaa Suomen Lähilogistiikka Oy:n Kela-kyydit Kymenlaaksossa. Voit saada Kela-korvaukset vain Kela-taksin numerosta tilatusta taksimatkasta.</p>
+      <p class="lead">Kymenlaakson Taksi Oy on Kelan sopimuskumppani Kymenlaakson alueella (Hamina, Kotka, Kouvola, Miehikkälä, Pyhtää ja Virolahti). Tilaa Kelan korvaama taksimatka numerosta <strong>0800 411254</strong>. Tilauspuhelu on maksuton.</p>
     </div>
   </section>
 
@@ -72,21 +72,46 @@
         <p>Tällä sivulla</p>
         <ul>
           <li><a href="#tilaa-kela-taksi">Tilaa Kela-taksi</a></li>
+          <li><a href="#tekstiviesti">Tilaus tekstiviestillä</a></li>
           <li><a href="#ohjeet">Ohjeita tilaamiseen</a></li>
+          <li><a href="#vakiotaksi">Vakiotaksiasiakkuus</a></li>
+          <li><a href="#palaute">Anna palautetta</a></li>
+          <li><a href="#lisatietoa">Lisätietoa</a></li>
+          <li><a href="#yhteystiedot">Yhteystiedot</a></li>
         </ul>
       </nav>
 
-      <div class="card" style="margin-bottom:32px;" id="tilaa-kela-taksi">
-        <div class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
-        <h2>Tilaa Kela-taksi Suomen Lähilogistiikalta numerosta</h2>
-        <a href="tel:+35880005163" class="big-num" style="font-size:1.8rem;font-weight:900;">0800 05163</a>
+      <div class="card" id="tilaa-kela-taksi">
+        <div class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h2>Tilaa Kela-taksi numerosta</h2>
+        <a href="tel:+358800411254" class="big-num kela-big-num">0800 411254</a>
         <p><strong>Tilauspuhelu on maksuton.</strong></p>
-        <p>Kymenlaakson Taksi Oy hoitaa Suomen Lähilogistiikka Oy:n Kela-kyydit Kymenlaaksossa.</p>
-        <p>Tilaa taksi viimeistään matkaa edeltävänä päivänä klo 14 mennessä.</p>
-        <p>Voit saada Kela-korvaukset vain Kela-taksin numerosta tilatusta taksimatkasta, jolloin maksat enintään 25 euron omavastuun.</p>
+
+        <div class="stat-grid fact-grid">
+          <div class="stat-cell">
+            <div class="stat-label">Tilaa edellisenä päivänä</div>
+            <div class="stat-value">klo 14</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-label">Omavastuu enintään</div>
+            <div class="stat-value">25 €</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-label">Palvelemme</div>
+            <div class="stat-value">24/7</div>
+          </div>
+        </div>
+
+        <p>Kymenlaakson Taksi Oy on Kelan sopimuskumppani Kymenlaakson alueella (Hamina, Kotka, Kouvola, Miehikkälä, Pyhtää ja Virolahti). Tilauspuhelu on maksuton.</p>
       </div>
 
-      <h2 id="ohjeet">Ohjeita Kela-taksin tilaamiseen</h2>
+      <div class="card" id="tekstiviesti" style="margin-top:24px;">
+        <h2>Tilaus tekstiviestillä kuulo- ja puhevammaisille</h2>
+        <p>Voit tilata matkan tekstiviestillä maksuttomasta numerosta <a href="sms:18445" class="big-num" style="font-size:1.3rem;">18445</a>. Saat vahvistuksen ja noutoajan tekstiviestillä.</p>
+        <p>Kerro viestissä samat tiedot kuin puhelintilauksessa (katso alta "Ilmoita tilauksen yhteydessä").</p>
+      </div>
+
+      <h2 id="ohjeet" style="margin-top:48px;">Ohjeita Kela-taksin tilaamiseen</h2>
       <div class="accordion">
 
         <div class="acc-item">
@@ -98,23 +123,24 @@
               <li>Tilaa taksi tästä numerosta myös silloin, kun tarvitset taksia äkillisesti.</li>
               <li>Voit tilata yhdellä kertaa tulevan kahden viikon ajalle kaikki tiedossasi olevat meno- ja paluumatkat.</li>
               <li>Tilaa paluumatka vähintään tuntia ennen lähtöaikaa, jos paluumatkan ajankohta on tiedossa.</li>
-              <li>Tilauspuhelut nauhoitetaan palvelun laadun kehittämiseksi.</li>
-              <li>Tarvittaessa Kela voi myös tarkistaa jälkikäteen tilauksen tietoja. Puhelun yhteydessä antamiasi tietoja ei käytetä muuhun kuin matkan järjestämiseen ja matkakorvauksen käsittelyyn Kelassa.</li>
-              <li>Henkilötietolaissa tarkoitettu tietojen rekisterinpitäjä on Kela.</li>
+              <li>Tilauspuhelut nauhoitetaan palvelun laadun kehittämiseksi. Tarvittaessa Kela voi myös tarkistaa jälkikäteen tilauksen tietoja.</li>
+              <li>Puhelun yhteydessä antamiasi tietoja ei käytetä muuhun kuin matkan järjestämiseen ja matkakorvauksen käsittelyyn Kelassa. Henkilötietolaissa tarkoitettu tietojen rekisterinpitäjä on Kela.</li>
+              <li>Palvelu on auki ympäri vuorokauden, joka päivä.</li>
             </ul>
           </div></div>
         </div>
 
         <div class="acc-item">
-          <button class="acc-trigger"><span>Ilmoita puhelun yhteydessä</span><span class="plus" aria-hidden="true">+</span></button>
+          <button class="acc-trigger"><span>Ilmoita tilauksen yhteydessä</span><span class="plus" aria-hidden="true">+</span></button>
           <div class="acc-panel"><div class="acc-panel-inner">
             <ul>
               <li>Nimesi ja henkilötunnuksesi</li>
-              <li>Osoite, josta auto noutaa sinut</li>
+              <li>Tilaatko matkan terveydentilasi vai liikenneolosuhteiden puutteen vuoksi</li>
+              <li>Osoite, josta auto sinut noutaa</li>
               <li>Matkan määränpää (esim. sairaala)</li>
               <li>Kellonaika, jolloin sinun tulee olla perillä hoitoyksikössä</li>
               <li>Tuleeko mukaasi apuvälineitä tai saattaja</li>
-              <li>Puhelinnumero, josta sinut tavoittaa.</li>
+              <li>Puhelinnumero, josta sinut tavoittaa</li>
             </ul>
           </div></div>
         </div>
@@ -122,34 +148,37 @@
         <div class="acc-item">
           <button class="acc-trigger"><span>Saat tiedon auton arvioidusta saapumisajasta</span><span class="plus" aria-hidden="true">+</span></button>
           <div class="acc-panel"><div class="acc-panel-inner">
-            <p>Jos tilaamasi taksimatkaan tulee muutoksia, ilmoita niistä välittömästi tilausnumeroon viimeistään kahta tuntia ennen sovittua lähtöaikaa.</p>
-          </div></div>
-        </div>
-
-        <div class="acc-item">
-          <button class="acc-trigger"><span>Näytä kuljettajalle Kela-korttisi</span><span class="plus" aria-hidden="true">+</span></button>
-          <div class="acc-panel"><div class="acc-panel-inner">
-            <p>Kun näytät kuljettajalle Kela-korttisi, saat matkakorvauksen heti taksissa ja maksat matkastasi enintään 25 euron omavastuun.</p>
-          </div></div>
-        </div>
-
-        <div class="acc-item">
-          <button class="acc-trigger"><span>Pyydä todistus matkakorvausta varten (SV 67)</span><span class="plus" aria-hidden="true">+</span></button>
-          <div class="acc-panel"><div class="acc-panel-inner">
             <ul>
-              <li>Jos tarvitset taksia terveydentilasi vuoksi, pyydä siitä todistus terveydenhuollosta (Todistus matkakorvausta varten, SV 67).</li>
-              <li>Jos terveydenhuollon henkilö tilaa paluumatkasi, et tarvitse todistusta SV67.</li>
-              <li>Säilytä kertamatkaa varten kirjoitettu todistus itselläsi kuuden kuukauden ajan matkapäivästä. Kela voi pyytää sitä myöhemmin.</li>
-              <li>Toimita pitkäaikainen taksin käyttöön oikeuttava todistus Kelaan.</li>
-              <li>Jos terveydenhuollon edustaja tilaa paluumatkasi puolestasi, et tarvitse erillistä todistusta.</li>
+              <li>Saat tekstiviestin, kun auto on hyväksynyt matkan. Viestissä on arvioitu noutoaika, auton rekisterinumero ja kuljettajan puhelinnumero.</li>
+              <li>Jos tilaamaasi taksimatkaan tulee muutoksia, ilmoita niistä välittömästi numeroon 0800 411254, viimeistään kahta tuntia ennen sovittua lähtöaikaa.</li>
             </ul>
           </div></div>
         </div>
 
         <div class="acc-item">
+          <button class="acc-trigger"><span>Näytä kuljettajalle Kela-korttisi tai henkilöllisyystodistus</span><span class="plus" aria-hidden="true">+</span></button>
+          <div class="acc-panel"><div class="acc-panel-inner">
+            <p>Näytä kuljettajalle Kela-korttisi tai henkilöllisyystodistus matkan alkaessa.</p>
+          </div></div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-trigger"><span>Todistus matkakorvausta varten (SV 67)</span><span class="plus" aria-hidden="true">+</span></button>
+          <div class="acc-panel"><div class="acc-panel-inner">
+            <ul>
+              <li>Jos tarvitset taksia terveydentilasi vuoksi, kysy todistusta terveydenhuollosta (Todistus matkakorvausta varten, SV 67).</li>
+              <li>Säilytä kertamatkaa varten kirjoitettu todistus itselläsi 6 kuukauden ajan matkapäivästä. Kela voi pyytää sitä myöhemmin.</li>
+              <li>Toimita pitkäaikainen taksin käyttöön oikeuttava todistus Kelaan.</li>
+              <li>Jos terveydenhuollon henkilö tilaa paluumatkasi, et tarvitse todistusta SV 67.</li>
+            </ul>
+          </div></div>
+        </div>
+
+        <div class="acc-item" id="vakiotaksi">
           <button class="acc-trigger"><span>Vakiotaksiasiakkuus</span><span class="plus" aria-hidden="true">+</span></button>
           <div class="acc-panel"><div class="acc-panel-inner">
-            <p>Tietyillä asiakasryhmillä on mahdollisuus saada vakiotaksiasiakkuus. Lisää tietoa vakiotaksiasiakkuudesta kela.fi/taksimatkat. Edellytyksenä vakiotaksiasiakkuuden järjestymiselle 1.7.2018 jälkeen on, että Kelan korvaamia taksikuljetuksia järjestävä tilausvälitysyhtiö pystyy osoittamaan asiakkaalle vakiotaksin.</p>
+            <p>Tietyillä asiakasryhmillä on mahdollisuus saada vakiotaksiasiakkuus. Lisätietoa: <a href="https://www.kela.fi/taksimatkat" target="_blank" rel="noopener">kela.fi/taksimatkat</a>.</p>
+            <p>Jos Kela on myöntänyt sinulle vakiotaksiasiakkuuden, soita numeroon 0800 411254. Osoitamme sinulle vakiokuljettajan. Sovit matkat suoraan vakiokuljettajasi kanssa, ja kuljettaja ilmoittaa matkan meille viimeistään edellisenä päivänä klo 14. Myös äkilliset matkat tilataan vakiotaksilta.</p>
           </div></div>
         </div>
 
@@ -160,30 +189,63 @@
   <section class="section-alt">
     <div class="wrap">
       <div class="card-grid">
-        <div class="card">
-          <div class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="5" r="2"/><path d="M13 7v4h5"/><path d="M9 11h4l3 8"/><path d="M11 11l-2 9"/><circle cx="8" cy="18" r="3"/></svg></div>
-          <h3>Tarvitsetko vaikeavammaisten kuljetuspalvelua?</h3>
-          <p>Sote-taksi on tarkoitettu Kymenlaakson hyvinvointialueen myöntämän kuljetuspalvelupäätöksen saaneille asiakkaille.</p>
-          <a href="sote-taksi.html" class="btn btn-outline">Siirry Sote-taksi-sivulle</a>
+        <div class="card card-yellow" id="palaute">
+          <h3>Anna palautetta</h3>
+          <p>Kerro meille, miten Kela-taksi-matkasi sujui. Palaute auttaa meitä kehittämään palvelua.</p>
+          <p>Voit antaa palautetta myös puhelimitse numerossa <a href="tel:+358800411254">0800 411254</a>. Vastaamme palautteisiin 7 vuorokauden kuluessa.</p>
+          <!-- TODO: palautelomakkeen osoite. Vaihda href="#" alla olevaan lomakkeen osoitteeseen, kun lomake on valmis. -->
+          <a href="#" class="btn btn-dark">Anna palautetta</a>
         </div>
-        <div class="card">
-          <div class="card-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-          <h3>Taksikortti kätevään matkustamiseen</h3>
-          <p>Kokoa kaikki taksimatkasi yhdelle laskulle taksikortilla tai kertakortilla.</p>
-          <a href="palvelut.html#taksikortti" class="btn btn-outline">Lue lisää ja tilaa</a>
+        <div class="card" id="lisatietoa">
+          <h3>Lisätietoa Kelan korvaamista taksimatkoista</h3>
+          <p>Lue lisää ehdoista: <a href="https://www.kela.fi/taksimatkat" target="_blank" rel="noopener">kela.fi/taksimatkat</a></p>
+          <p>Matkakorvaukseen liittyvissä kysymyksissä ota yhteyttä Kelan yhteyskeskukseen, puh. <a href="tel:+35820692204">020 692 204</a>.</p>
+          <p>Kiireellistä sairaankuljetusta tarvittaessa soita hätänumeroon <a href="tel:112">112</a>.</p>
         </div>
       </div>
+
+      <p style="margin-top:24px;">Tarvitsetko vaikeavammaisten kuljetuspalvelua? Lue lisää <a href="sote-taksi.html">Sote-taksista</a>.</p>
     </div>
   </section>
 
-  <section>
+  <section id="yhteystiedot">
     <div class="wrap">
-      <div class="cta-band">
-        <h2>Tilaa taksi apilla ilmaiseksi</h2>
-        <p style="color:rgba(255,255,255,.7);">tai soittamalla 0100 87227 (1,54 € puhelu + 0,81 € / min + pvm)</p>
-        <div class="btn-row">
-          <a href="tel:+35810087227" class="btn btn-primary btn-lg">Soita 0100 87227</a>
+      <div class="section-head">
+        <span class="eyebrow">Muut tilausnumerot</span>
+        <h2>Terveydenhuollolle, liikenteenharjoittajille ja yhteystiedot</h2>
+      </div>
+      <div class="contact-grid">
+
+        <div>
+          <div class="contact-card">
+            <h3>Terveydenhuollon ammattilaisille</h3>
+            <a href="tel:+358800411256" class="big-num">0800 411256</a>
+            <p class="fine">Maksuton, palvelee ympäri vuorokauden. Terveydenhuollon tilaama matka ei vaadi SV 67 -todistusta.</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Liikenteenharjoittajille ja kuljettajille</h3>
+            <a href="tel:+358800411257" class="big-num">0800 411257</a>
+            <p class="fine">Maksuton, palvelee ympäri vuorokauden. Esimerkiksi vakiotaksitilaukset, matkan muutokset ja reittimuutokset.</p>
+          </div>
         </div>
+
+        <div>
+          <div class="contact-card">
+            <h3>Puhelutallenteet ja omat tietosi</h3>
+            <p>Sinulla on oikeus kuunnella sinua koskeva tilauspuhelun tallenne ja tarkistaa, mitä tietoja sinusta on tallennettu. Sovi asiasta numerossa <a href="tel:+358800411254">0800 411254</a> tai sähköpostilla <a href="mailto:kela@kymenlaaksontaksi.fi">kela@kymenlaaksontaksi.fi</a>. Tallenteita säilytetään 12 kuukautta.</p>
+            <p><a href="https://www.kymenlaaksontaksi.fi/tietosuojaseloste" target="_blank" rel="noopener">Lue tietosuojaseloste ›</a></p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Yhteystiedot</h3>
+            <p style="margin-bottom:4px;"><strong>Kymenlaakson Taksi Oy</strong></p>
+            <p style="margin-bottom:4px;">Y-tunnus 1941760-7</p>
+            <p style="margin-bottom:4px;">Ruuvikatu 12, 48770 Kotka</p>
+            <p><a href="mailto:kela@kymenlaaksontaksi.fi">kela@kymenlaaksontaksi.fi</a></p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -209,11 +271,13 @@
         <a href="yrityksille.html">Yrityksille</a>
         <a href="rekry.html">Rekry</a>
         <a href="ota-yhteytta.html">Ota yhteyttä</a>
+        <a href="kela-taksi.html#palaute">Anna Kela-palautetta</a>
       </div>
       <div>
         <h4>Tilaukset</h4>
         <a href="tel:+35810087227">Taksitilaukset 0100 87227</a>
-        <a href="tel:+35880005163">Kela-taksi 0800 05163</a>
+        <a href="tel:+358800411254">Kela-taksi 0800 411254</a>
+        <a href="tel:+358800411256">Kela, terveydenhuolto 0800 411256</a>
         <a href="tel:+358800302323">Sote-taksi 0800 302323</a>
       </div>
     </div>
@@ -228,6 +292,6 @@
 
 <button class="back-to-top" aria-label="Takaisin sivun alkuun">↑</button>
 
-<script src="assets/script.js?v=5"></script>
+<script src="assets/script.js?v=6"></script>
 </body>
 </html>
