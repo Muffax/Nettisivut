@@ -209,7 +209,7 @@ p { line-height: 1.65; color: var(--gray-700); margin: 0 0 1em; }
 }
 .nav-dropdown-menu a:hover,
 .nav-dropdown-menu a:focus-visible { background: var(--gray-100); }
-.nav-dropdown-menu a.active { color: var(--yellow-deep); }
+.nav-dropdown-menu a.active { color: var(--ink); background: var(--yellow); font-weight: 800; }
 
 /* Mobiilin alavalikko: aina näkyvät alalinkit ilman erillistä togglea */
 .mobile-nav .sub-links { background: rgba(255,255,255,.03); }
@@ -781,7 +781,37 @@ section { padding: 72px 0; }
 }
 .calc-result.show { display: block; }
 .calc-result .amount { font-size: 2.4rem; font-weight: 900; color: var(--yellow); }
-.calc-result .breakdown { font-size: .85rem; color: rgba(255,255,255,.6); margin-top: 8px; line-height: 1.7; }
+.calc-result .breakdown { margin-top: 14px; }
+.breakdown-heading {
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: rgba(255,255,255,.55);
+  margin: 0 0 8px;
+}
+.breakdown-list { list-style: none; margin: 0; padding: 0; font-size: .92rem; }
+.breakdown-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+.breakdown-list li:last-child { border-bottom: none; }
+.breakdown-list .bd-label { color: rgba(255,255,255,.75); }
+.breakdown-list .bd-amount { font-weight: 700; color: var(--white); white-space: nowrap; }
+.breakdown-list li.bd-min .bd-label,
+.breakdown-list li.bd-min .bd-amount { color: var(--yellow); }
+.breakdown-list li.bd-total {
+  border-top: 1px solid rgba(255,255,255,.3);
+  border-bottom: none;
+  margin-top: 4px;
+  padding-top: 12px;
+}
+.breakdown-list li.bd-total .bd-label,
+.breakdown-list li.bd-total .bd-amount { font-weight: 800; color: var(--yellow); font-size: 1rem; }
 .calc-source { font-size: .78rem; color: var(--muted); margin-top: 16px; }
 .calc-source a { text-decoration: underline; }
 

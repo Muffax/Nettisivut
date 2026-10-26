@@ -450,13 +450,27 @@ function initHintalaskuri() {
       var hintaRaaka = lahtomaksu + ajomaksu + aikaveloitus + odotusmaksu;
       var hinta = Math.max(hintaRaaka, 10);
 
+      function eur(n) { return n.toFixed(2).replace('.', ',') + ' €'; }
+
       amountEl.textContent = hinta.toFixed(2).replace('.', ',') + ' €';
-      breakdownEl.innerHTML =
-        'Lähtömaksu ' + lahtomaksu.toFixed(2).replace('.', ',') + ' € · ' +
-        'Matka ' + km.toFixed(1).replace('.', ',') + ' km (' + ajomaksu.toFixed(2).replace('.', ',') + ' €) · ' +
-        'Aika ' + Math.round(min) + ' min (' + aikaveloitus.toFixed(2).replace('.', ',') + ' €)' +
-        (waitMin > 0 ? ' · Odotus ' + Math.round(waitMin) + ' min (' + odotusmaksu.toFixed(2).replace('.', ',') + ' €)' : '') +
-        (hintaRaaka < 10 ? ' · Minimihinta 10 €' : '');
+
+      var rows = [
+        { label: 'Lähtömaksu', amount: eur(lahtomaksu) },
+        { label: 'Matka ' + km.toFixed(1).replace('.', ',') + ' km × ' + kmRate.toFixed(2).replace('.', ',') + ' €/km', amount: eur(ajomaksu) },
+        { label: 'Aika ' + Math.round(min) + ' min × 0,65 €/min', amount: eur(aikaveloitus) }
+      ];
+      if (waitMin > 0) {
+        rows.push({ label: 'Odotus ' + Math.round(waitMin) + ' min × 65 €/h', amount: eur(odotusmaksu) });
+      }
+      var rowsHtml = rows.map(function (r) {
+        return '<li><span class="bd-label">' + r.label + '</span><span class="bd-amount">' + r.amount + '</span></li>';
+      }).join('');
+      if (hintaRaaka < 10) {
+        rowsHtml += '<li class="bd-min"><span class="bd-label">Hinta alittaa minimihinnan</span><span class="bd-amount">Veloitus 10 €</span></li>';
+      }
+      rowsHtml += '<li class="bd-total"><span class="bd-label">Yhteensä</span><span class="bd-amount">' + eur(hinta) + '</span></li>';
+      breakdownEl.innerHTML = '<p class="breakdown-heading">Näin hinta muodostuu:</p><ul class="breakdown-list">' + rowsHtml + '</ul>';
+
       resultBox.classList.add('show');
       resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
