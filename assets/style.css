@@ -1141,3 +1141,27 @@ section { padding: 72px 0; }
  .premium-site .hero h1 { font-size:clamp(3rem,11vw,5rem); }
  .premium-site main > section:first-child:not(.hero) { padding-top:75px !important; padding-bottom:75px !important; }
 }
+
+/* QA fixes: high contrast and transparent price summary. */
+.premium-home .premium-prices .stat-grid { background:#000; border:2px solid #000; border-radius:8px; gap:1px; }
+.premium-home .premium-prices .stat-cell { background:#000; color:#fff; }
+.premium-home .premium-prices .stat-cell .stat-icon { color:#ffed00; }
+.premium-home .premium-prices .stat-cell .stat-label { color:#fff; font-size:.88rem; letter-spacing:.035em; }
+.premium-home .premium-prices .stat-cell .stat-value { color:#ffed00; font-size:clamp(2.2rem,3.5vw,3.7rem); line-height:1.1; }
+.premium-home .premium-prices .stat-cell .stat-unit { color:#ffed00; font-size:clamp(.95rem,1.5vw,1.3rem); }
+.premium-home .premium-prices .stat-cell svg { stroke:currentColor; }
+.premium-site main > section:first-child:not(.hero) .section-head h1,
+.premium-site main > section:first-child:not(.hero) .section-head > p { color:#fff; }
+.premium-site main > section:first-child:not(.hero) .price-table th,
+.premium-site main > section:first-child:not(.hero) .price-table td { color:#000; }
+.premium-site main > section:first-child:not(.hero) .price-table thead th { background:#ffed00; color:#000; }
+.premium-site main > section:first-child:not(.hero) .contact-card .big-num { color:#000; }
+.premium-home .premium-prices .btn-outline-light:hover { background:#000; color:#ffed00; }
+@media(max-width:760px) {
+ .premium-home .premium-prices .stat-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .premium-home .premium-prices .stat-cell { padding:22px 10px; }
+ .premium-home .premium-prices .stat-cell .stat-value { font-size:clamp(1.8rem,7vw,2.7rem); }
+}
+@media(max-width:390px) {
+ .premium-home .premium-prices .stat-grid { grid-template-columns:1fr; }
+}
