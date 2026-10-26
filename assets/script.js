@@ -617,7 +617,7 @@ function initAvoimetTyopaikat() {
   function renderJobs(jobs) {
     var open = jobs.filter(function (j) { return j && j.active !== false; });
     if (!open.length) {
-      container.innerHTML = '<p class="job-empty">Ei tällä hetkellä avoimia haettavia paikkoja — voit silti jättää avoimen hakemuksen alta.</p>';
+      container.innerHTML = '<p class="job-empty">Ei tällä hetkellä avoimia haettavia paikkoja. Voit silti jättää avoimen hakemuksen alta.</p>';
       return;
     }
     container.innerHTML = '';
