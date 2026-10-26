@@ -2,6 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  initSeasonalHero();
+
   // Mobiilivalikko
   var menuToggle = document.querySelector('.menu-toggle');
   var mobileNav = document.querySelector('.mobile-nav');
@@ -154,6 +156,43 @@ document.addEventListener('DOMContentLoaded', function () {
    kasvaa, harkitse oman Nominatim/OSRM-instanssin pystyttämistä tai
    kaupallista geokoodaus-/reititysrajapintaa.
    ======================================================================= */
+
+
+/* =======================================================================
+   Vuodenajan mukaan vaihtuva herokuva. Toistaiseksi käytössä on vain
+   talvi- ja kesäkuvasto (kuvapankista löytyi laadukkaat kuvaukset näistä
+   kahdesta vuodenajasta, ei vielä omia kevät-/syksykuvauksia). Kevät ja
+   syksy käyttävät toistaiseksi lähintä sopivaa kuvasarjaa alla olevan
+   SEASON_FALLBACK-kartan mukaan — kun kevät-/syksykuvat joskus kuvataan,
+   lisää ne kuvan data-kevat/data-syksy-attribuutteihin ja poista vastaava
+   rivi SEASON_FALLBACK-kartasta, niin ne otetaan automaattisesti käyttöön.
+   ======================================================================= */
+var SEASON_MONTHS = {
+  talvi: [11, 12, 1, 2, 3],
+  kevat: [4, 5],
+  kesa: [6, 7, 8, 9],
+  syksy: [10]
+};
+// Vuodenaika -> mitä data-attribuuttia kuvasta oikeasti haetaan juuri nyt.
+var SEASON_FALLBACK = { talvi: 'talvi', kevat: 'talvi', kesa: 'kesa', syksy: 'kesa' };
+
+function currentSeason(month) {
+  month = month || (new Date().getMonth() + 1);
+  for (var season in SEASON_MONTHS) {
+    if (SEASON_MONTHS[season].indexOf(month) !== -1) return season;
+  }
+  return 'kesa';
+}
+
+function initSeasonalHero() {
+  var img = document.getElementById('seasonal-hero');
+  if (!img) return;
+  var season = currentSeason();
+  var key = SEASON_FALLBACK[season] || season;
+  var src = img.getAttribute('data-' + key);
+  if (src) img.src = src;
+}
+
 function initHintalaskuri() {
   var submitBtn = document.getElementById('calc-submit');
   if (!submitBtn) return;

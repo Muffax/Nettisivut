@@ -2,11 +2,13 @@
    Musta + keltainen taksi-ilme, moderni ja selkeä rakenne. */
 
 :root {
-  --black: #0c0c0c;
-  --black-soft: #161616;
-  --yellow: #ffd400;
-  --yellow-deep: #e6bf00;
-  --ink: #1a1a1a;
+  /* Kymenlaakson Taksin virallinen graafinen ohjeisto: keltainen #ffed00,
+     musta #000000, valkoinen #ffffff. Puhtaimmat mahdolliset sävyt. */
+  --black: #000000;
+  --black-soft: #0d0d0d;
+  --yellow: #ffed00;
+  --yellow-deep: #e0d800;
+  --ink: #000000;
   --gray-900: #202020;
   --gray-700: #4a4a4a;
   --gray-400: #8a8a8a;
@@ -260,7 +262,7 @@ p { line-height: 1.65; color: var(--gray-700); margin: 0 0 1em; }
 .hero-page .wrap { grid-template-columns: 1fr; padding-top: 56px; padding-bottom: 56px; }
 .hero h1 { color: var(--ink); }
 .hero .eyebrow { background: var(--ink); color: var(--yellow); }
-.hero p.lead { color: rgba(12,12,12,.82); font-size: 1.15rem; max-width: 560px; }
+.hero p.lead { color: rgba(0,0,0,.82); font-size: 1.15rem; max-width: 560px; }
 
 .hero-graphic { display: flex; justify-content: center; align-items: center; }
 .hero-graphic svg { width: 100%; max-width: 360px; height: auto; }
@@ -295,7 +297,7 @@ p { line-height: 1.65; color: var(--gray-700); margin: 0 0 1em; }
 .hero-photo-page::after {
   content: "";
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(12,12,12,.5) 0%, rgba(12,12,12,.93) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.93) 100%);
   z-index: 1;
 }
 .hero-photo-page .wrap {
@@ -626,7 +628,7 @@ section { padding: 72px 0; }
 /* ---------- Yellow section + values ---------- */
 .section-yellow { background: var(--yellow); color: var(--ink); }
 .section-yellow h2 { color: var(--ink); }
-.section-yellow p { color: rgba(12,12,12,.82); }
+.section-yellow p { color: rgba(0,0,0,.82); }
 .section-yellow .eyebrow { background: var(--ink); color: var(--yellow); }
 
 .value-grid {
