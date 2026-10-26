@@ -192,6 +192,13 @@ p { line-height: 1.65; color: var(--gray-700); margin: 0 0 1em; }
   margin: 0;
 }
 .nav-dropdown-menu.open { display: block; }
+/* Hiirellä viedään kursori valikon päälle, ei tarvitse klikata auki.
+   Näppäimistökäyttäjille valikko aukeaa fokuksella (:focus-within) aina,
+   kosketuslaitteilla vain klikkauksella (ei hover-kykyä). */
+.nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+@media (hover: hover) and (pointer: fine) {
+  .nav-dropdown:hover .nav-dropdown-menu { display: block; }
+}
 .nav-dropdown-menu a {
   display: block;
   padding: 10px 14px;
