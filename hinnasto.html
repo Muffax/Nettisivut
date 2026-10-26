@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hinnasto — Kymenlaakson Taksi</title>
 <meta name="description" content="Kymenlaakson Taksin hinnasto: lähtömaksut, kilometrimaksut, odotusmaksu ja lisät.">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=4">
 <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32">
 <link rel="icon" href="assets/images/favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
@@ -64,156 +64,145 @@
     </div>
   </section>
 
-  <section>
+  <section id="hintalaskuri">
     <div class="wrap">
+      <div class="pricing-grid">
 
-      <div class="stat-grid" style="margin-bottom:48px;">
-        <div class="stat-cell">
-          <div class="stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-          <div class="stat-label">1–4 henkilöä</div>
-          <div class="stat-value">1,66<span class="stat-unit">€/km</span></div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <div class="stat-label">5–8 henkilöä</div>
-          <div class="stat-value">2,55<span class="stat-unit">€/km</span></div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="stat-label">Aikaveloitus</div>
-          <div class="stat-value">0,65<span class="stat-unit">€/min</span></div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></div>
-          <div class="stat-label">Perusmaksu ma–la klo 6–18</div>
-          <div class="stat-value">5,60<span class="stat-unit">€/kerta</span></div>
-        </div>
-      </div>
-
-      <table class="price-table">
-        <thead>
-          <tr><th>Maksu</th><th style="text-align:right;">Hinta</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Lähtömaksu ma–la klo 6–18</td>
-            <td class="amount">5,60 € / kerta</td>
-          </tr>
-          <tr>
-            <td>Lähtömaksu muina aikoina ja pyhäpäivinä</td>
-            <td class="amount">8,60 € / kerta</td>
-          </tr>
-          <tr>
-            <td>Kilometrimaksu, 1–4 henkilöä</td>
-            <td class="amount">1,66 € / km + 0,65 € / min</td>
-          </tr>
-          <tr>
-            <td>Kilometrimaksu, 5–8 henkilöä</td>
-            <td class="amount">2,55 € / km + 0,65 € / min</td>
-          </tr>
-          <tr>
-            <td>Minimihinta</td>
-            <td class="amount">10 €</td>
-          </tr>
-          <tr>
-            <td>Odotusmaksu</td>
-            <td class="amount">65 € / h</td>
-          </tr>
-          <tr>
-            <td>Avustuslisä</td>
-            <td class="amount">21 €</td>
-          </tr>
-          <tr>
-            <td>Porrasveto</td>
-            <td class="amount">42 €</td>
-          </tr>
-          <tr>
-            <td>Paariasennus</td>
-            <td class="amount">42 €</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="price-note">Hinnat sisältävät alv 13,5 %. Tarkemman hinnaston saat toimistoltamme, <a href="ota-yhteytta.html">ota yhteyttä</a>.</p>
-    </div>
-  </section>
-
-  <section class="section-alt" id="hintalaskuri">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Hintalaskuri</span>
-        <h2>Arvioi taksikyytisi hinta</h2>
-      </div>
-
-      <div class="calc-card">
-        <p class="calc-note">Laskuri käyttää yllä olevan hinnaston hintoja. Hinta on arvio — lopullinen hinta määräytyy aina taksimittarin mukaan.</p>
-
-        <fieldset class="calc-fieldset">
-          <legend>Milloin matkustat?</legend>
-          <div class="calc-radio-row">
-            <label class="calc-radio"><input type="radio" name="calc-time" value="day" checked> Ma–la klo 6–18 (5,60 €)</label>
-            <label class="calc-radio"><input type="radio" name="calc-time" value="night"> Muina aikoina ja pyhäpäivinä (8,60 €)</label>
+        <div>
+          <div class="section-head">
+            <span class="eyebrow">Hinnasto</span>
+            <h2>Hinnat</h2>
           </div>
-        </fieldset>
-
-        <fieldset class="calc-fieldset">
-          <legend>Kuinka monta matkustajaa?</legend>
-          <div class="calc-radio-row">
-            <label class="calc-radio"><input type="radio" name="calc-pax" value="1-4" checked> 1–4 henkilöä (1,66 €/km)</label>
-            <label class="calc-radio"><input type="radio" name="calc-pax" value="5-8"> 5–8 henkilöä (2,55 €/km)</label>
+          <div class="table-scroll">
+          <table class="price-table">
+            <thead>
+              <tr><th>Maksu</th><th style="text-align:right;">Hinta</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lähtömaksu ma–la klo 6–18</td>
+                <td class="amount">5,60 € / kerta</td>
+              </tr>
+              <tr>
+                <td>Lähtömaksu muina aikoina ja pyhäpäivinä</td>
+                <td class="amount">8,60 € / kerta</td>
+              </tr>
+              <tr>
+                <td>Kilometrimaksu, 1–4 henkilöä</td>
+                <td class="amount">1,66 € / km + 0,65 € / min</td>
+              </tr>
+              <tr>
+                <td>Kilometrimaksu, 5–8 henkilöä</td>
+                <td class="amount">2,55 € / km + 0,65 € / min</td>
+              </tr>
+              <tr>
+                <td>Minimihinta</td>
+                <td class="amount">10 €</td>
+              </tr>
+              <tr>
+                <td>Odotusmaksu</td>
+                <td class="amount">65 € / h</td>
+              </tr>
+              <tr>
+                <td>Avustuslisä</td>
+                <td class="amount">21 €</td>
+              </tr>
+              <tr>
+                <td>Porrasveto</td>
+                <td class="amount">42 €</td>
+              </tr>
+              <tr>
+                <td>Paariasennus</td>
+                <td class="amount">42 €</td>
+              </tr>
+            </tbody>
+          </table>
           </div>
-        </fieldset>
+          <p class="price-note">Hinnat sisältävät alv 13,5 %. Tarkemman hinnaston saat toimistoltamme, <a href="ota-yhteytta.html">ota yhteyttä</a>.</p>
+        </div>
 
-        <fieldset class="calc-fieldset">
-          <legend>Miten lasketaan?</legend>
-          <div class="calc-method-row">
-            <label class="calc-radio"><input type="radio" name="calc-method" value="manual" checked> Syötän matkan pituuden ja ajan itse</label>
-            <label class="calc-radio"><input type="radio" name="calc-method" value="address"> Haen reitin osoitteilla</label>
+        <div>
+          <div class="section-head">
+            <span class="eyebrow">Hintalaskuri</span>
+            <h2>Arvioi matkasi hinta</h2>
           </div>
-        </fieldset>
 
-        <div class="calc-panel active" data-panel="manual">
-          <div class="calc-grid-2">
-            <div class="calc-field">
-              <label for="calc-km">Matkan pituus (km)</label>
-              <input class="calc-input" type="number" min="0" step="0.1" id="calc-km" value="0">
+          <div class="calc-card">
+            <p class="calc-note">Käyttää yllä olevan hinnaston hintoja. Hinta on arvio — lopullinen hinta määräytyy aina taksimittarin mukaan.</p>
+
+            <div class="calc-top-grid">
+              <fieldset class="calc-fieldset">
+                <legend>Milloin matkustat?</legend>
+                <div class="calc-radio-row">
+                  <label class="calc-radio"><input type="radio" name="calc-time" value="day" checked> Ma–la klo 6–18 (5,60 €)</label>
+                  <label class="calc-radio"><input type="radio" name="calc-time" value="night"> Muu aika / pyhä (8,60 €)</label>
+                </div>
+              </fieldset>
+
+              <fieldset class="calc-fieldset">
+                <legend>Matkustajia</legend>
+                <div class="calc-radio-row">
+                  <label class="calc-radio"><input type="radio" name="calc-pax" value="1-4" checked> 1–4 hlö (1,66 €/km)</label>
+                  <label class="calc-radio"><input type="radio" name="calc-pax" value="5-8"> 5–8 hlö (2,55 €/km)</label>
+                </div>
+              </fieldset>
             </div>
-            <div class="calc-field">
-              <label for="calc-min">Matka-aika (min)</label>
-              <input class="calc-input" type="number" min="0" step="1" id="calc-min" value="0">
+
+            <div class="tabs calc-method-tabs" data-target="#calc-method-panels">
+              <button type="button" class="tab-btn active" data-tab="manual">Syötän matkan itse</button>
+              <button type="button" class="tab-btn" data-tab="address">Haen reitin osoitteilla</button>
             </div>
+
+            <div id="calc-method-panels">
+              <div class="tab-panel calc-panel active" id="manual">
+                <div class="calc-grid-2">
+                  <div class="calc-field">
+                    <label for="calc-km">Matkan pituus (km)</label>
+                    <input class="calc-input" type="number" min="0" step="0.1" id="calc-km" value="0">
+                  </div>
+                  <div class="calc-field">
+                    <label for="calc-min">Matka-aika (min)</label>
+                    <input class="calc-input" type="number" min="0" step="1" id="calc-min" value="0">
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-panel calc-panel" id="address">
+                <div class="calc-field ac-wrap">
+                  <label for="calc-from">Lähtöpaikka</label>
+                  <input class="calc-input" type="text" id="calc-from" autocomplete="off" placeholder="esim. Ruuvikatu 12, Kotka">
+                  <div class="ac-list" id="calc-from-list" hidden></div>
+                  <span class="visually-hidden" id="calc-from-live" aria-live="polite"></span>
+                </div>
+                <div class="calc-field ac-wrap">
+                  <label for="calc-to">Määränpää</label>
+                  <input class="calc-input" type="text" id="calc-to" autocomplete="off" placeholder="esim. Kymenlaakson keskussairaala">
+                  <div class="ac-list" id="calc-to-list" hidden></div>
+                  <span class="visually-hidden" id="calc-to-live" aria-live="polite"></span>
+                </div>
+                <div class="calc-route-row">
+                  <button type="button" class="btn btn-outline" id="calc-route-btn">Hae reitti</button>
+                  <p class="ac-status" id="calc-route-status" aria-live="polite"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-field calc-wait-field">
+              <label for="calc-wait">Odotusaika (valinnainen, min)</label>
+              <input class="calc-input" type="number" min="0" step="1" id="calc-wait" value="0">
+            </div>
+
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="calc-submit">Laske hinta</button>
+
+            <div class="calc-result" id="calc-result" aria-live="polite">
+              <div class="amount" id="calc-amount">0 €</div>
+              <div class="breakdown" id="calc-breakdown"></div>
+            </div>
+
+            <p class="calc-source">Osoitehaku: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-tekijät</a> (Nominatim). Reititys: <a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a>.</p>
           </div>
         </div>
 
-        <div class="calc-panel" data-panel="address">
-          <div class="calc-field ac-wrap">
-            <label for="calc-from">Lähtöpaikka</label>
-            <input class="calc-input" type="text" id="calc-from" autocomplete="off" placeholder="esim. Ruuvikatu 12, Kotka">
-            <div class="ac-list" id="calc-from-list" hidden></div>
-            <span class="visually-hidden" id="calc-from-live" aria-live="polite"></span>
-          </div>
-          <div class="calc-field ac-wrap">
-            <label for="calc-to">Määränpää</label>
-            <input class="calc-input" type="text" id="calc-to" autocomplete="off" placeholder="esim. Kymenlaakson keskussairaala">
-            <div class="ac-list" id="calc-to-list" hidden></div>
-            <span class="visually-hidden" id="calc-to-live" aria-live="polite"></span>
-          </div>
-          <p class="ac-status" id="calc-route-status" aria-live="polite"></p>
-          <button type="button" class="btn btn-outline" id="calc-route-btn">Hae reitti</button>
-        </div>
-
-        <div class="calc-field" style="max-width:220px;margin-top:22px;">
-          <label for="calc-wait">Odotusaika (valinnainen, min)</label>
-          <input class="calc-input" type="number" min="0" step="1" id="calc-wait" value="0">
-        </div>
-
-        <button type="button" class="btn btn-primary btn-lg" id="calc-submit">Laske hinta</button>
-
-        <div class="calc-result" id="calc-result" aria-live="polite">
-          <div class="amount" id="calc-amount">0 €</div>
-          <div class="breakdown" id="calc-breakdown"></div>
-        </div>
-
-        <p class="calc-source">Osoitehaku: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-tekijät</a> (Nominatim), rajattu Kymenlaakson alueelle paikannimien parempaa tunnistusta varten. Reititys: <a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a>.</p>
       </div>
     </div>
   </section>
@@ -286,6 +275,6 @@
 
 <button class="back-to-top" aria-label="Takaisin sivun alkuun">&#8593;</button>
 
-<script src="assets/script.js"></script>
+<script src="assets/script.js?v=4"></script>
 </body>
 </html>

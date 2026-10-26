@@ -199,16 +199,27 @@ function initHintalaskuri() {
 
   var KYMENLAAKSO_VIEWBOX = '26.0,61.3,28.3,60.2'; // lon_left,lat_top,lon_right,lat_bottom
 
-  var methodRadios = document.querySelectorAll('input[name="calc-method"]');
-  var panels = document.querySelectorAll('.calc-panel');
-
-  methodRadios.forEach(function (radio) {
-    radio.addEventListener('change', function () {
-      panels.forEach(function (p) {
-        p.classList.toggle('active', p.dataset.panel === radio.value);
-      });
-    });
-  });
+  // Lyhyt, luettava osoitenimi Nominatimin rakenteisista address-kentistä
+  // (addressdetails=1). Pitkän, koko hallinnollisen hierarkian sisältävän
+  // display_name-kentän sijaan näytetään vain olennainen: nimi/katu + kunta.
+  // withCity=true lisää kunnan (käytetään alasvetolistassa ja kun osoite on
+  // valittu); withCity=false antaa lyhimmän mahdollisen otsikon (listan
+  // ensimmäinen, lihavoitu rivi).
+  function addressLabel(r, withCity) {
+    var a = r.address || {};
+    var name = a.amenity || a.shop || a.office || a.tourism || a.leisure || a.building ||
+      a.square || a.marketplace;
+    var road = [a.road || a.pedestrian || a.footway, a.house_number].filter(Boolean).join(' ');
+    var city = a.city || a.town || a.village || a.municipality;
+    var parts = [];
+    if (name) parts.push(name);
+    else if (road) parts.push(road);
+    if (withCity && city && city !== parts[0]) parts.push(city);
+    if (parts.length) return parts.join(', ');
+    // Varalla: jos address-kenttiä ei saatu, lyhennetään display_name
+    var segs = (r.display_name || '').split(',').map(function (s) { return s.trim(); });
+    return withCity ? segs.slice(0, 2).join(', ') : segs[0];
+  }
 
   // ---- Osoitehaku (autocomplete) Nominatimilla ----
   function setupAutocomplete(inputId, listId) {
@@ -270,12 +281,11 @@ function initHintalaskuri() {
         item.setAttribute('role', 'option');
         item.setAttribute('aria-selected', 'false');
         item.dataset.index = i;
-        var main = (r.display_name || '').split(',')[0];
         item.innerHTML = '<div class="ac-main"></div><div class="ac-sub"></div>';
-        item.querySelector('.ac-main').textContent = main;
-        item.querySelector('.ac-sub').textContent = r.display_name;
+        item.querySelector('.ac-main').textContent = addressLabel(r, false);
+        item.querySelector('.ac-sub').textContent = addressLabel(r, true);
         item.addEventListener('click', function () {
-          input.value = r.display_name;
+          input.value = addressLabel(r, true);
           input.dataset.lat = r.lat;
           input.dataset.lon = r.lon;
           closeList();
@@ -300,7 +310,7 @@ function initHintalaskuri() {
       debounceTimer = setTimeout(function () {
         if (controller) controller.abort();
         controller = new AbortController();
-        var url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&limit=6'
+        var url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&limit=6&addressdetails=1'
           + '&countrycodes=fi&accept-language=fi'
           + '&viewbox=' + KYMENLAAKSO_VIEWBOX + '&bounded=0'
           + '&q=' + encodeURIComponent(query);
@@ -344,7 +354,7 @@ function initHintalaskuri() {
 
   // Yksittäisen osoitteen geokoodaus (varalla, jos käyttäjä ei valinnut listasta)
   function geocode(query) {
-    var url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1'
+    var url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&addressdetails=1'
       + '&countrycodes=fi&accept-language=fi'
       + '&viewbox=' + KYMENLAAKSO_VIEWBOX + '&bounded=0'
       + '&q=' + encodeURIComponent(query);
@@ -412,7 +422,8 @@ function initHintalaskuri() {
   submitBtn.addEventListener('click', function () {
     var time = document.querySelector('input[name="calc-time"]:checked').value;
     var pax = document.querySelector('input[name="calc-pax"]:checked').value;
-    var method = document.querySelector('input[name="calc-method"]:checked').value;
+    var activeMethodPanel = document.querySelector('#calc-method-panels .tab-panel.active');
+    var method = activeMethodPanel ? activeMethodPanel.id : 'manual';
 
     var lahtomaksu = time === 'day' ? 5.60 : 8.60;
     var kmRate = pax === '1-4' ? 1.66 : 2.55;
